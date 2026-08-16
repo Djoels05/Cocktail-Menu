@@ -532,13 +532,13 @@ const SEED = [
   {name:"Margarita", category:"Tequila", desc:"Zilt, zuur en zonnig — de tequila-klassieker bij uitstek.",
     specs:[{i:"Tequila",a:"50 ml"},{i:"Triple sec",a:"20 ml"},{i:"Limoensap",a:"25 ml"}], meta:"Glas met zoutrand", image:"", flavors:["zuur","fris"], color:"#cfe08a"},
   
-  {name:"Moscow Mule", category:"Wodka", desc:"Pittige gember en frisse limoen, traditioneel in koper geserveerd.",
+  {name:"Moscow Mule", category:"Vodka", desc:"Pittige gember en frisse limoen, traditioneel in koper geserveerd.",
     specs:[{i:"Wodka",a:"50 ml"},{i:"Gemberbier",a:"120 ml"},{i:"Limoensap",a:"15 ml"}], meta:"Koperen beker, muntblaadje", image:"", flavors:["fris","zuur"], color:"#e8c468"},
   
-  {name:"Cosmopolitan", category:"Wodka", desc:"Roze, elegant en fruitig zuur.",
+  {name:"Cosmopolitan", category:"Vodka", desc:"Roze, elegant en fruitig zuur.",
     specs:[{i:"Wodka",a:"40 ml"},{i:"Triple sec",a:"15 ml"},{i:"Cranberrysap",a:"30 ml"},{i:"Limoensap",a:"15 ml"}], meta:"Coupeglas, sinaasappelzeste", image:"", flavors:["fruitig","zuur","zoet"], color:"#e0507a"},
   
-  {name:"Espresso Martini", category:"Wodka", desc:"Zoet, sterk en klaarwakker — dessert en borrel ineen.",
+  {name:"Espresso Martini", category:"Vodka", desc:"Zoet, sterk en klaarwakker — dessert en borrel ineen.",
     specs:[{i:"Vodka",a:"30 ml"},{i:"Koffielikeur",a:"30 ml"},{i:"Verse espresso",a:"30 ml"}], meta:"Martini glass, 3 koffiebonen", image:"", flavors:["zoet","sterk","romig"], color:"#3b2314"},
   
   {name:"Aperol Spritz", category:"Bubbels", desc:"Licht, bitterzoet en oneindig terrasvriendelijk.",
@@ -560,6 +560,7 @@ const SEED = [
   {name:"Love & Murder", category:"Overige", specs:[{i:"Campari",a:"22.5 ml"},{i:"Groene Chartreuse",a:"22.5 ml"},{i:"Limoensap",a:"22.5 ml"},{i:"Suikersiroop",a:"22.5 ml"}], meta:"Martini glass", image:"", flavors:["bitter","zuur","zoet"], color:"#c1443c"},
   
   {name:"Spanish Monk", category:"Gin", specs:[{i:"London Dry Gin",a:"45 ml"},{i:"Groene Chartreuse",a:"15 ml"},{i:"Citroensap",a:"22.5 ml"},{i:"Suikersiroop",a:"10 ml"},{i:"Eiwit",a:""},{i:"Saline",a:"3 drops"}], meta:"Coupe glass", image:"", flavors:[],color:"#fffdd0"},
+  
   {name:"Campari Tonic", category:"Amari", specs:[{i:"Campari",a:"50 ml"},{i:"Tonic",a:"120 ml"}], meta:"Highball glass", image:"", flavors:['bitter','fruitig'], color:"#ff4b3b"},
 
   {name:"Negroni Sbagliato", category:"Amari", desc:"Een ietwat toegankelijkere Negroni",
@@ -569,9 +570,9 @@ const SEED = [
 
   {name:"Earl Grey Mar-tea-ni", category:"Gin",specs:[{i:"Earl Grey infused Gin",a:"45 ml"},{i:"Citroensap",a:"22.5 ml"},{i:"Suikersiroop",a:"30 ml"},{i:"Eiwit",a:""}], meta:"Martini glass, sinaasappelschil", image:"", flavors:["zoet", "zacht"], color:"#e0983f"},
 
-  {name:"Black Russian", category:"Wodka", specs:[{i:"Vodka",a:"60 ml"},{i:"Koffielikeur",a:"30 ml"}], meta:"Rocks glass", image:"", flavors:["sterk"], color:"#401a03"},
+  {name:"Black Russian", category:"Vodka", specs:[{i:"Vodka",a:"60 ml"},{i:"Koffielikeur",a:"30 ml"}], meta:"Rocks glass", image:"", flavors:["sterk"], color:"#401a03"},
 
-  {name:"White Russian", category:"Wodka", specs:[{i:"Vodka",a:"60 ml"},{i:"Koffielikeur",a:"30 ml"},{i:"Volle Room",a:"30 ml"}], meta:"Rocks glass", image:"", flavors:["sterk"], color:"#a67f67"},
+  {name:"White Russian", category:"Vodka", specs:[{i:"Vodka",a:"60 ml"},{i:"Koffielikeur",a:"30 ml"},{i:"Volle Room",a:"30 ml"}], meta:"Rocks glass", image:"", flavors:["sterk"], color:"#a67f67"},
 
   {name:"Italian Gin & Tonic", category:"Gin", desc:"Het huwelijk van een Negroni en een G&T",
     specs:[{i:"Gin",a:"50 ml"},{i:"Campari",a:"15 ml"},{i:"Rode vermouth",a:"15 ml"},{i:"Tonic",a:""}], meta:"Highball, rozemarijn", image:"", flavors:["bitter","fris"], color:"#ff8284"},
@@ -615,11 +616,11 @@ const SEED = [
   {name:"Kentucky Mule", category:"Whiskey", desc:"Pittige gember en frisse limoen, traditioneel in koper geserveerd.",
     specs:[{i:"Bourbon",a:"60 ml"},{i:"Gemberbier",a:"120 ml"},{i:"Limoensap",a:"15 ml"}], meta:"Koperen beker, muntblaadje", image:"", flavors:["fris","zoet"], color:"#e8c468"},
 
-  {name:"Brave Bull", category:"Wodka", desc:"Een Mexicaanse Black Russian", specs:[{i:"Tequila",a:"60 ml"},{i:"Koffielikeur",a:"30 ml"}], meta:"Rocks glass", image:"", flavors:["sterk"], color:"#401a03"},
+  {name:"Brave Bull", category:"Tequila", desc:"Een Mexicaanse Black Russian", specs:[{i:"Tequila",a:"60 ml"},{i:"Koffielikeur",a:"30 ml"}], meta:"Rocks glass", image:"", flavors:["sterk"], color:"#401a03"},
   
 ];
 
-const CATS = ["Alle","Brandy","Amari","Vermouth","Gin","Rum","Whiskey","Tequila","Wodka","Tiki","Bubbels","Overige","Mocktail"];
+const CATS = ["Alle","Brandy","Amari","Vermouth","Gin","Rum","Whiskey","Tequila","Vodka","Tiki","Bubbels","Overige","Mocktail"];
 const DRANKKAST_CATS = CATS.filter(c=>c!=="Alle");
 
 // Herkent welke spirit-categorieën in een cocktail zitten op basis van de ingrediëntnamen.
@@ -631,7 +632,7 @@ const SPIRIT_KEYWORDS = {
   Rum: ["rum"],
   Whiskey: ["whisk", "bourbon", "rye"],
   Tequila: ["tequila"],
-  Wodka: ["wodka", "vodka"],
+  Vodka: ["wodka", "vodka"],
   Bubbels: ["prosecco", "champagne", "cava"],
   Overige: ["chartreuse", "maraschino", "curaçao", "curacao", "triple sec", "grand marnier", "cointreau", "koffielikeur", "kahlua", "kahlúa", "amaretto", "sambuca", "baileys","calvados"]
 };
