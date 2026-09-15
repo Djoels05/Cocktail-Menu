@@ -859,7 +859,7 @@ function bestelCocktail(naam, btn){
     method: 'POST',
     body: `Nieuwe bestelling: ${naam}`,
     headers: {
-      'Title': 'Cocktail besteld 🍹',
+      'Title': 'Cocktail besteld',
       'Priority': 'high',
       'Tags': 'cocktail,tada'
     }
@@ -869,7 +869,6 @@ function bestelCocktail(naam, btn){
       const txt = await res.text().catch(()=> '');
       throw new Error(`ntfy gaf ${res.status} ${res.statusText} — ${txt}`);
     }
-    // succes: korte bevestiging, dan knop resetten
     if(btn){
       setTimeout(()=>{
         btn.disabled = false;
