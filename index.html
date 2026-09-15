@@ -847,18 +847,29 @@ function escapeHtml(s){
 function escapeAttr(s){ return escapeHtml(s); }
 
 /* ================= Bestellen via ntfy.sh =================
-   Vervang JOUW-TOPIC hieronder door je eigen (geheime) ntfy.sh-topic.
+   Kies een eigen, moeilijk te raden topicnaam. Iedereen die
+   de topicnaam kent, kan meelezen én berichten sturen.
 */
-const NTFY_TOPIC = 'JuulFraeyman-cocktails-xyz123';
+const NTFY_TOPIC = 'JuulFraeyman-cocktails-xyz123'; // <-- pas dit aan!
 
 function bestelCocktail(naam, btn){
   if(btn){ btn.disabled = true; btn.classList.add('ordered'); btn.textContent = '✓'; }
-  fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
+
+  fetch(`https://ntfy.sh/${encodeURIComponent(NTFY_TOPIC)}`, {
     method: 'POST',
     body: `Nieuwe bestelling: ${naam}`,
-    headers: { 'Title': 'Cocktail besteld 🍹', 'Priority': 'high' }
+    headers: {
+      'Title': 'Cocktail besteld 🍹',
+      'Priority': 'high',
+      'Tags': 'cocktail,tada'
+    }
   })
-  .then(()=>{
+  .then(async (res) => {
+    if(!res.ok){
+      const txt = await res.text().catch(()=> '');
+      throw new Error(`ntfy gaf ${res.status} ${res.statusText} — ${txt}`);
+    }
+    // succes: korte bevestiging, dan knop resetten
     if(btn){
       setTimeout(()=>{
         btn.disabled = false;
@@ -867,13 +878,12 @@ function bestelCocktail(naam, btn){
       }, 4000);
     }
   })
-  .catch(()=>{
-    alert('Bestelling versturen mislukt, probeer opnieuw.');
+  .catch((err) => {
+    console.error('Bestelling mislukt:', err);
+    alert('Bestelling versturen mislukt:\n' + err.message);
     if(btn){ btn.disabled = false; btn.classList.remove('ordered'); btn.textContent = '+'; }
   });
 }
-
-document.getElementById('search').addEventListener('input', render);
 
 /* ================= Drawer / navigation ================= */
 const menuToggle = document.getElementById('menuToggle');
