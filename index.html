@@ -1100,7 +1100,7 @@ function verstuurBestelling(){
 
   fetch(`https://ntfy.sh/${encodeURIComponent(NTFY_TOPIC)}`, {
     method: 'POST',
-    body: `Nieuwe bestelling: ${naam} — voor ${besteller}`,
+    body: `${naam} — voor ${besteller}`,
     headers: {
       'Title': 'Cocktail besteld',
       'Priority': 'high',
